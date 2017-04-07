@@ -1,0 +1,66 @@
+<!-- <h1>singleproduct</h1> -->
+<div class="container"></div>
+<div class="row">
+    <div class="col-sm-6 col-md-4">
+      <img src="{{product.image}}" alt="..." width="300px" height="300px" class="single">
+
+<div class="panel panel-default">
+
+  <div class="panel-heading">    <h2>{{product.name}}</h2></div>
+   <div class="panel-body">
+     <div class="alert alert-danger" role="alert">
+         <h4>{{product.price |currency}}</h4>
+      </div>
+
+      <ul>
+<li>{{product.features['weight']}}</li>
+<li>{{product.features['ram']}}</li>
+<li>{{product.features['dual sim']}}</li>
+<li>{{product.features['camera']}}</li>
+<li>{{product.features['display']}}</li>
+<li>{{product.features['memory']}}</li>
+
+
+      </ul>
+   </div>
+
+</div>
+
+
+<div class="panel panel-primary review">
+
+  <div class="panel-heading">    <h2>Reviews</h2></div>
+   <div class="panel-body">
+     <div class="alert alert-warning" role="alert">
+
+
+         <p style="color:black">{{product.reviews[0].reviewer}}   {{product.reviews[0].review}}
+           <div style="color:black;text-align:right" star-raating ng-model="product.reviews[0].rate"></div>
+
+         </p></div>
+       <div class="alert alert-warning" role="alert">
+
+           <p style="color:black">{{product.reviews[1].reviewer}}   {{product.reviews[1].review}}
+             <div style="color:black;text-align:right" star-raating ng-model="product.reviews[1].rate"></div>
+
+           </p></div>
+
+      </div>
+
+
+
+
+   </div>
+
+</div>
+
+
+
+
+
+      <!--
+                <input type="text" ng-model="product.reviews[1].rate">
+                <div star-raating ng-model="product.reviews[1].rate"></div> -->
+
+    </div>
+</div>
